@@ -117,16 +117,6 @@ tagger.open('baseline_tagger.crfsuite')
 
 y_pred = tagger.tag(X_test)
 
-# original code
-# with open(sys.argv[3], 'w') as outfile:
-#     for n in range(len(dev_files)):
-#         for tag in range(len(dev_files[n])):
-#             outfile.write(y_pred[tag])
-#             outfile.write("\n")
-#         outfile.write("\n")
-
-# changed code
-#############################################
 with open(sys.argv[3], 'w') as outfile:
     t = 0
     for n in range(len(dev_files)):
@@ -135,7 +125,6 @@ with open(sys.argv[3], 'w') as outfile:
             t += 1
             outfile.write("\n")
         outfile.write("\n")
-##############################################
 
 # def accuracy():
 #     count = 0
